@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto programadorBR</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body><!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora de Consumo de Combustível</title>
+  </head>
+  <body>
+    <h1>Calculadora de Consumo de Combustível</h1>
+
+    <form>
+      <label>Quilômetros rodados: <input type="text" id="km_rodados"></label>
+      <br>
+      <label>Valor gasto no abastecimento: <input type="text" id="valor_abastecido"></label>
+      <br>
+      <label>Preço do litro de combustível: <input type="text" id="preco_litro"></label>
+      <br>
+      <button onclick="calcularConsumo()">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+      function calcularConsumo() {
+        var km_rodados = document.getElementById("km_rodados").value;
+        var valor_abastecido = document.getElementById("valor_abastecido").value;
+        var preco_litro = document.getElementById("preco_litro").value;
+        var litros_abastecidos = valor_abastecido / preco_litro;
+        var consumo = km_rodados / litros_abastecidos;
+        document.getElementById("resultado").innerHTML = "O seu carro está fazendo " + consumo.toFixed(2) + " km/l.";
+      }
+    </script>
+  </body>
+</html>
+</body>
+</html>
